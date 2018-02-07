@@ -1,0 +1,22 @@
+<nb-layout>
+  <nb-layout-header>
+    <app-navbar class="container" title="{{title}}"></app-navbar>
+  </nb-layout-header>
+
+  <nb-layout-column>
+    <div class="container text-center mb-4">
+      <h1>{{title}}</h1>
+    </div>
+
+    <div class="d-flex justify-content-center flex-wrap">
+      <div class="movie my-1 mx-1" *ngFor="let movie of movies" routerLink="/movie/{{movie.id}}">
+        <img src="{{ getPosterFor(movie) }}" alt="poster">
+        <div>
+          <h3 class="text-dark">{{ movie.title }}</h3>
+          <p class="text-dark">{{ movie.overview }}</p>
+        </div>
+      </div>
+    </div>
+
+  </nb-layout-column>
+</nb-layout>

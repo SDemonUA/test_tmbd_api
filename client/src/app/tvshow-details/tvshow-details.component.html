@@ -1,0 +1,35 @@
+<nb-layout>
+  <nb-layout-header>
+    <app-navbar class="container"></app-navbar>
+  </nb-layout-header>
+
+  <nb-layout-column class="container" *ngIf="tvshow">
+    <h2 class="mb-4 text-center">
+      {{tvshow.name}}
+      <span class="text-secondary" *ngIf="tvshow.original_name && tvshow.original_name != tvshow.name">
+        /{{tvshow.original_name}}
+      </span>
+    </h2>
+
+    <div class="container">
+      <div class="row justify-content-md-center mb-3">
+        <div class="col col-md-10">
+          <img class="rounded mx-auto d-block img-fluid" src="{{ getBackdrop() }}">
+        </div>
+      </div>
+      <div class="row mb-3">
+        <div class="col col-sm-2 offset-md-1">
+          Votes: {{tvshow.vote_count}}
+        </div>
+        <div class="col col-sm-2 offset-md-6 text-right">
+          Votes average: {{tvshow.vote_average}}
+        </div>
+      </div>
+      <div class="row justify-content-md-center">
+        <div class="col col-md-10">
+          <p>{{tvshow.overview}}</p>
+        </div>
+      </div>
+    </div>
+  </nb-layout-column>
+</nb-layout>

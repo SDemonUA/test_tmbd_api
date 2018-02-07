@@ -1,0 +1,11 @@
+<nb-layout>
+  <nb-layout-header>
+    <app-navbar class="container" title="Search"></app-navbar>
+  </nb-layout-header>
+
+  <nb-layout-column class="container">
+    <h3>Search results for: <b>{{ query }}</b></h3>
+
+    <ng2-smart-table [settings]="settings" [source]="data" (userRowSelect)="onUserRowSelect($event)"></ng2-smart-table>
+  </nb-layout-column>
+</nb-layout>

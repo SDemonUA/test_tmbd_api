@@ -1,0 +1,42 @@
+/* You can add global styles to this file, and also import other style files */
+@media (max-width: 991px){
+  .nb-theme-cosmic nb-layout .layout nb-layout-header nav {
+    height: auto !important;
+  }
+}
+
+.movie {
+  overflow: hidden;
+  width: 317px;
+  height: 469px;
+  /* width: 342px; */
+  /* height: 507px; */
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.movie > img {
+  width: 100%;
+}
+
+.movie > div {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  padding: 15px;
+  background: rgba(255,255,255,.8);
+  opacity: 0;
+  transition: .4s opacity ease-in-out, .4s background ease;
+  cursor: pointer;
+}
+
+.movie > div:hover {
+  opacity: 1;
+}
+
+.movie > div:active {
+  opacity: 1;
+  background: white;
+}

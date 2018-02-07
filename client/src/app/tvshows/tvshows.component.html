@@ -1,0 +1,21 @@
+<nb-layout>
+  <nb-layout-header>
+    <app-navbar class="container" title="{{title}}"></app-navbar>
+  </nb-layout-header>
+
+  <nb-layout-column>
+    <div class="container text-center mb-4">
+      <h1>{{title}}</h1>
+    </div>
+
+    <div class="d-flex justify-content-center flex-wrap">
+      <div class="movie my-1 mx-1" *ngFor="let tvshow of tvshows" routerLink="/tvshow/{{tvshow.id}}">
+        <img src="{{ getPosterFor(tvshow) }}" alt="poster">
+        <div>
+          <h3 class="text-dark">{{ tvshow.name }}</h3>
+          <p class="text-dark">{{ tvshow.overview }}</p>
+        </div>
+      </div>
+    </div>
+  </nb-layout-column>
+</nb-layout>
