@@ -1,0 +1,30 @@
+{
+  "name": "test_work",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:swagger": "./node_modules/.bin/tsoa swagger",
+    "build:routes": "./node_modules/.bin/tsoa routes",
+    "build:tsc": "./node_modules/.bin/tsc",
+    "build:server": "npm run build:swagger && npm run build:routes && npm run build:tsc",
+    "build:client": "cd client && ng build",
+    "build:client:prod": "cd client && ng build -prod",
+    "build": "npm run build:server && npm run build:client:prod",
+    "start": "node ./dist/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2",
+    "method-override": "^2.3.10",
+    "moviedb": "^0.2.10",
+    "tsoa": "^2.0.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.11.1",
+    "@types/node": "^6.0.96",
+    "dotenv": "^5.0.0"
+  }
+}

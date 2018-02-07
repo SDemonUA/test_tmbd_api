@@ -1,0 +1,15 @@
+{
+    "swagger": {
+        "outputDirectory": "./dist/public",
+        "entryFile": "./server.ts",
+        "host": "localhost:3000",
+        "basePath": "/v1",
+        "yaml": false
+    },
+    "routes": {
+        "basePath": "/v1",
+        "entryFile": "./server.ts",
+        "routesDir": "./",
+        "middleware": "express"
+    }
+}
