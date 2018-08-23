@@ -1,5 +1,7 @@
 ### Install
 
+`mkdir dist`
+
 `npm install -g @angular/cli`
 
 `npm install`
