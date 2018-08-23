@@ -1,6 +1,6 @@
 require('dotenv/config');
 
-import './controllers/movieDbController';
+import './controllers/moviedbController';
 import * as bodyParser from 'body-parser';
 import * as express from 'express';
 import * as methodOverride from 'method-override';
@@ -34,4 +34,4 @@ app.get('*', (req, res) => {
 
 /* tslint:disable-next-line */
 console.log('Starting server on port 3000...');
-app.listen(3000);
+app.listen(3000, () => console.log('Server started!'));

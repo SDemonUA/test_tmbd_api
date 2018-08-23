@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build:swagger": "./node_modules/.bin/tsoa swagger",
+    "build:swagger": "./node_modules/.bin/tsoa swagger --json",
     "build:routes": "./node_modules/.bin/tsoa routes",
     "build:tsc": "./node_modules/.bin/tsc",
     "build:server": "npm run build:swagger && npm run build:routes && npm run build:tsc",
